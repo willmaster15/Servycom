@@ -5,7 +5,7 @@ const uuid = require('uuid');
 const moment = require('moment');
 
 const app = express();
-const port = 21;
+const port = process.env.PORT || 3306;
 
 // Configuración de la conexión a la base de datos MySQL
 const connection = mysql.createConnection({
