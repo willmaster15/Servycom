@@ -9,10 +9,10 @@ const port = process.env.PORT || 10000;
 
 // Configuración de la conexión a la base de datos MySQL
 const connection = mysql.createConnection({
-  host: '120.0.0.1',
-  user: 'id22094581_wilaper2025',
-  password: 'WilSON--254@@@****',
-  database: 'id22094581_servycominternet',
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
 
 connection.connect((err) => {
